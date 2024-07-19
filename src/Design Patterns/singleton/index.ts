@@ -1,3 +1,4 @@
+
 class SingletonComponent {
   private static myInstance: SingletonComponent;
   private age: number = 2;

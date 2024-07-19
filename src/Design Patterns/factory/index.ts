@@ -21,17 +21,22 @@ class Bike extends Vehicle{
     }
 }
 
-class FactoryClass {
+enum EVehicleType{
+    Car = "Car",
+    Truck = "Truck",
+    Bike = "Bike",
+}
 
-    public getVehicle(vehicleType:string):Vehicle{
+class FactoryClass {
+    public getVehicle(vehicleType:EVehicleType):Vehicle{
         switch(vehicleType){
-            case "Car":{
+            case EVehicleType.Car:{
                 // return new Car();
             }
-            case "Truck":{
+            case EVehicleType.Truck:{
                 return new Truck();
             }
-            case "Bike":{
+            case EVehicleType.Bike:{
                 return new Bike();
             }
             default:{
@@ -44,4 +49,4 @@ class FactoryClass {
 
 const temp = new FactoryClass();
 
-temp.getVehicle("Car").startEngine()
+temp.getVehicle(EVehicleType.Car).startEngine()
