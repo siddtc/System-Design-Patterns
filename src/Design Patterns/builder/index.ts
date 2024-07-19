@@ -1,80 +1,76 @@
-class Car{
-    public seats: number;
-    public color: string;
-    public engine: string;
-    public type: string;
+// class Car{
+//     public seats: number;
+//     public color: string;
+//     public engine: string;
+//     public type: string;
+
+//     public display(){
+//         console.log(this);
+//     }
+// }
+
+// interface ICarBuilder{
+//     setColor(color:string):void;
+//     setSeats(seats:number):void;
+//     buildCar():Car;
+// }
+
+// class CompanyBuilder implements ICarBuilder{
+
+//     private car:Car
+
+//     constructor(){
+//         this.car = new Car();
+//     }
+
+//     setColor(color:string){
+//         this.car.color = color;
+//     };
+
+//     setSeats(seats:number){
+//         this.car.seats = seats;
+//     }
+
+//     public buildCar():Car{
+//         return this.car;
+//     }
+// }
 
 
-    constructor(){
-    }
+// class CustomCarBuilder implements ICarBuilder{
+//     private car:Car;
 
-    public display(){
-        console.log(this);
-    }
-}
+//     constructor(){
+//         this.car = new Car();
+//     }
 
-interface ICarBuilder{
-    setColor(color:string):void;
-    setSeats(seats:number):void;
-    buildCar():Car;
-}
+//     public setColor(color:string){
+//         this.car.color = color;
+//     };
 
-class CompanyBuilder implements ICarBuilder{
+//     public setSeats(seats:number){
+//         this.car.seats = seats;
+//     }
 
-    private car:Car
+//     public buildCar():Car{
+//         return this.car;
+//     }
+// }
 
-    constructor(){
-        this.car = new Car();
-    }
+// class Salesperson{
 
-    setColor(color:string){
-        this.car.color = color;
-    };
+//     private builder:any;
 
-    setSeats(seats:number){
-        this.car.seats = seats;
-    }
+//     Salesperson(builder:any){
+//         this.builder = builder;
+//     }
 
-    public buildCar():Car{
-        return this.car;
-    }
-}
+//     public getSportsCar():Car{
 
+//         return this.builder.setColor().setSeats().buildCar();
+//     }
 
-class CustomCarBuilder implements ICarBuilder{
-    private car:Car;
-
-    constructor(){
-        this.car = new Car();
-    }
-
-    public setColor(color:string){
-        this.car.color = color;
-    };
-
-    public setSeats(seats:number){
-        this.car.seats = seats;
-    }
-
-    public buildCar():Car{
-        return this.car;
-    }
-}
-
-class Salesperson{
-
-    private builder:any;
-
-    Salesperson(builder:any){
-        this.builder = builder;
-    }
-
-    public getSportsCar():Car{
-
-        return this.builder.setColor().setSeats().buildCar();
-    }
-
-    public getFamilyCar(): Car{
-        return this.builder.setColor().setSeats().buildCar();
-    }
-}
+//     public getFamilyCar(): Car{
+//         return this.builder.setColor().setSeats().buildCar();
+//     }
+// }
